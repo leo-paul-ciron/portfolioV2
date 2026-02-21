@@ -14,9 +14,9 @@ import {
   TextField,
   Snackbar,
   CssBaseline,
-  ThemeProvider,
+  ThemeProvider
 } from '@mui/material'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/GridLegacy'
 import MailOutlineIcon from '@mui/icons-material/MailOutline'
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone'
 import LanguageIcon from '@mui/icons-material/Language'
@@ -87,7 +87,7 @@ const GlassCard = ({
   </Card>
 )
 
-const skillIconMap: Record<string, JSX.Element> = {
+const skillIconMap: Record<string, any> = {
   Agile: <AutoAwesomeIcon />,
   Angular: <LayersIcon />,
   Java: <DataObjectIcon />,
@@ -521,9 +521,9 @@ function App() {
         <Container>
           <SectionTitle title={content.sections.contact.title} subtitle={content.sections.contact.subtitle} />
           <AccentLine />
-          <Grid container spacing={6} alignItems="strech" justifyContent="center">
-            <Grid>
-              <GlassCard sx={{ height: '100%', width:'70vw', margin: { md: '0 auto' } }}>
+          <Grid container spacing={6} alignItems="stretch" justifyContent="center">
+            <Grid item xs={12} md={8} lg={7}>
+              <GlassCard sx={{ height: '100%', width: '100%' }}>
                 <CardContent
                   sx={{
                     p: { xs: 2.5, md: 3.5 },
